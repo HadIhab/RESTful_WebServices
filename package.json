@@ -1,0 +1,39 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HadIhab/RESTful_WebServices.git"
+  },
+  "author": "Hadjerci Ihab",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HadIhab/RESTful_WebServices/issues"
+  },
+  "homepage": "https://github.com/HadIhab/RESTful_WebServices#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "eslint": "^7.23.0"
+  },
+  "nodemonConfig":{
+    "restartable": "rs",
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
+    "delay": "2500",
+    "env": {
+      "NODE_ENV": "development",
+      "PORT": 4000
+    }
+  }
+}
