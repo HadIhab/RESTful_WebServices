@@ -11,7 +11,6 @@ const bookRouter = require('./routes/bookRouter')(Book);
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
- 
 app.use('/api',bookRouter);
 
 app.get('/',(req,res)=>{
