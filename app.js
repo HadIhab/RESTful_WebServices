@@ -9,10 +9,13 @@ const bookRouter = express.Router();
 const Book = require('./models/bookModel');
 
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
 bookRouter.route('/books')
-  .post('', ()=>{
-
+  .post((req,res)=>{
+  	const book = new Book(req.body);
+  	console.log(book);
+  	return res.json(book);
   })	
   .get((req,res)=>{
   	const query = {};
