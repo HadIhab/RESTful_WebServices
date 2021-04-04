@@ -17,6 +17,7 @@ function booksController(Book) {
         return res.json(books);
       });
   }
+  return { post, get };
 }
 
 module.exports = booksController;
